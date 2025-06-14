@@ -7,3 +7,5 @@ def removeElement(nums , val) :
     return x
 
 print(removeElement([3, 2, 2, 3], 3))  # Output: 2
+
+# this is code in pytho
