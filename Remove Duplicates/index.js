@@ -34,12 +34,15 @@
 // Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
-var removeDuplicates = function(nums) {
-    let x = 0; for (let i = 0; i < nums.length; i++) {
+function removeDuplicates(nums) {
+    let x = 0; 
+    for(let i = 0; i < nums.length; i++) {
         if(nums[i] > nums[x]) {
             x++
             nums[x] = nums[i]
         }
     }
     return x + 1
-};
+}
+
+console.log(removeDuplicates([4,4,5,8,9,45,45,45,45,45,45]));
