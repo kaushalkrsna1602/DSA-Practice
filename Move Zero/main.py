@@ -1,5 +1,5 @@
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
+    def moveZeroes(self, nums) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -12,4 +12,3 @@ class Solution:
         for i in range(x , len(nums)):
             nums[i] = 0
 
-            
