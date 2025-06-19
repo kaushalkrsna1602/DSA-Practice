@@ -26,3 +26,16 @@ var singleNumber = function(nums) {
 
 console.log(singleNumber([1, 2 , 3, 2 , 3]))
 
+
+// Approach 2 XOR
+
+var singleNumber = function(nums) {
+    let xor = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        xor = xor ^ nums[i]
+    }
+
+    return xor
+};
+
