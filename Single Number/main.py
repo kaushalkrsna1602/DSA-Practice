@@ -1,3 +1,5 @@
+# Approch 1 : Brute Force
+
 def singleNumber(nums):
     hash = {}
 
@@ -6,3 +8,14 @@ def singleNumber(nums):
     for num in nums:
         if hash[num] == 1:
             return num
+        
+
+
+# Approach 2 XOR
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        xor = 0
+        for num in nums:
+            xor ^= num
+        return xor
