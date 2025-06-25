@@ -8,4 +8,13 @@ def fibo(n):
         b = next_fib
     print(b)
 
-fibo(5)
+# fibo(5)
+
+# Recursive code
+
+
+def fibo2(n):
+    if n <= 1: return n
+    return fibo2(n -1) + fibo2(n - 2)
+
+print(fibo2(5))
