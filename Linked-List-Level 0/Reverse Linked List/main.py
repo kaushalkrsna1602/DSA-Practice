@@ -2,13 +2,13 @@
 
 # // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
-def reverseLinkedList(head):
-    prev = None
-    curr = head
-    while curr:
-        temp = curr.next
-        curr.next = prev
-        prev = curr
-        curr = temp
-    head = prev
-    return head
+class Solution:
+    def reverseList(self, head):
+        prev = None
+        curr = head
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
