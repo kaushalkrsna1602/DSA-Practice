@@ -20,3 +20,20 @@ var hasCycle = function(head) {
     }
     return false
 };
+
+// Approach 2 : Floyd's Cycle Finding ALgorithm / SLOW AND FAST POINTER APPROACH
+
+var hasCycle = function(head) {
+    if(!head) return false;
+    let slow = head;
+    let fast = head.next;
+
+    while(slow != fast) {
+        if (fast === null || fast.next === null) {
+            return false;
+        }
+        slow = slow.next;
+        fast = fast.next.next
+    }
+    return true
+};
