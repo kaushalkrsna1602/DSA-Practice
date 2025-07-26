@@ -30,3 +30,30 @@ class Solution:
         s.next = None
         return newHead
         
+
+class Solution(object):
+    def rotateRight(self, head, k):
+        if not head or not head.next or k == 0:
+            return head
+
+        length = 1
+        tail = head
+        while tail.next:
+            tail = tail.next
+            length += 1
+
+        k = k % length
+        if k == 0:
+            return head
+
+        steps = length - k
+        prev = None
+        curr = head
+        for _ in range(steps):
+            prev = curr
+            curr = curr.next
+
+        prev.next = None
+        tail.next = head
+        return curr
+    
