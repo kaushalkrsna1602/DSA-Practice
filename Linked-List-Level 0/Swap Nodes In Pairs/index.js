@@ -56,3 +56,13 @@ var swapPairs2 = function(head) {
     return dummy.next;
 };
     
+
+var swapPairs2 = function(head) {
+    if (!head || !head.next) return head;
+
+    let left = head;
+    let right = head.next
+    left.next = swapPairs2(right.next)
+    right.next = left
+    return right
+};
