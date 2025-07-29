@@ -11,3 +11,16 @@ def countLastWord(s):
     return count
 
 print(countLastWord(" Length of Last Word  "))
+
+def countLastWord2(s):
+    n = len(s) - 1
+    count = 0
+    while n >= 0:
+        if s[n] != " ":
+            count += 1
+        elif count > 0:
+            break
+    n -= 1
+    return count
+
+print(countLastWord2(" Length of Last Word  "))
