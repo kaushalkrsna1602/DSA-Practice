@@ -56,3 +56,25 @@ class Solution:
                     ans += ch
                     
         return ans
+
+
+
+
+# without stack 
+
+class Solution:
+    def removeOuterParentheses(self, s: str) -> str:
+        level = 0
+        ans = ""
+        
+        for ch in s:
+            if ch == "(":
+                if level > 0:  # if stack not empty, it's not outermost
+                    ans += ch
+                level += 1
+            else:  # ch == ")"
+                level -= 1
+                if level > 0:  # if stack still not empty, it's not outermost
+                    ans += ch
+                    
+        return ans
